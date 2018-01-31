@@ -54,7 +54,7 @@ CHIP ALU {
 
         // ny
         Not16(in=zyout, out=notzyout);
-        Add16(a=zyout, b=notzyout, out=nyout);
+        Mux16(a=zyout, b=notzyout, sel=ny, out=nyout);
 
         // x + y
         Add16(a=nxout, b=nyout, out=addxy);
